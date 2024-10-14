@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FisioVitae</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function redirigirWhatsApp() {
+            let nombre = document.getElementById("nombre").value;
+            let correo = document.getElementById("correo").value;
+            let telefono = document.getElementById("telefono").value;
+            let mensaje = document.getElementById("mensaje").value;
+            
+            let url = `https://wa.me/+529993639771?text=${encodeURIComponent(
+    `Hola, soy ${nombre}. Mi correo es ${correo} y mi teléfono es ${telefono}. ${mensaje}`
+)}`;
+
+            
+            window.open(url, "_blank");
+        }
+
+        function sendToWhatsApp(event) {
+    event.preventDefault(); // Evitar el envío del formulario
+
+    // Obtener los valores de los campos
+    const nombre = document.getElementById('nombreAgendar').value;
+    const edad = document.getElementById('edadAgendar').value;
+    const fecha = document.getElementById('fechaAgendar').value;
+    const telefono = document.getElementById('telefonoAgendar').value;
+    const correo = document.getElementById('correoAgendar').value;
+
+    // Crear el mensaje para WhatsApp
+    const mensaje = `Hola, quiero agendar una cita con los siguientes datos:\n\nNombre: ${nombre}\nEdad: ${edad}\nFecha: ${fecha}\nTeléfono: ${telefono}\nCorreo Electrónico: ${correo}`;
+    
+    // Crear la URL de WhatsApp
+    const numeroTelefono = '+529993639771'; // Cambia esto por tu número de WhatsApp
+    const urlWhatsApp = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}`;
+
+    // Redirigir a WhatsApp
+    window.open(urlWhatsApp, '_blank');
+}
+    </script>
+</head>
+<body>
+    <header id="index">
+        <div class="nav-bg">
+            <nav class="navegacion-principal contenedor">
+                <img src="images/logo.png" alt="Logo" class="logo">
+                <a href="#index">Inicio</a>
+                <a href="#galeria">Galería</a>
+                <a href="#main">Servicios</a>
+                <a href="#main">Contactar</a>
+                <a href="#ubicacion">Nuestra Ubicación</a>
+                <a href="#agendar-cita">Agendar Cita</a>
+            </nav>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="titulo">
+            <h1>Cuidado de <span>la salud</span></h1>
+            <p>Brindamos los mejores servicios para mejorar tu bienestar físico.</p>
+            <a href="#main">Contactar ahora</a>
+        </div>
+        <div class="banner-img">
+            <img src="images/24237736_6911126.svg" alt="Imagen del banner">
+        </div>
+    </section>
+    <section class="galeria" id="galeria">
+        <div class="header-galeria">
+        <h2>La mejor atención para usted</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+        </div>
+        <div class="images">
+            <img src="images/img1.jpg" alt="">
+            <img src="images/img2.jpg" alt="">
+            <img src="images/img3.jpg" alt="">
+            <img src="images/img4.jpg" alt="">
+            <img src="images/img5.jpg" alt="">
+            <img src="images/img6.jpg" alt="">
+        </div>
+    </section>
+    <main id="main">
+        <div class="contenedor-servicios">
+            <div class="servicios">
+                <h2>¿Qué ofrecemos?</h2>
+                <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clipboard-heart" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+                    <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+                    <path d="M11.993 16.75l2.747 -2.815a1.9 1.9 0 0 0 0 -2.632a1.775 1.775 0 0 0 -2.56 0l-.183 .188l-.183 -.189a1.775 1.775 0 0 0 -2.56 0a1.899 1.899 0 0 0 0 2.632l2.738 2.825z" />
+                  </svg>Consulta General</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-stethoscope" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M6 4h-1a2 2 0 0 0 -2 2v3.5h0a5.5 5.5 0 0 0 11 0v-3.5a2 2 0 0 0 -2 -2h-1" />
+                    <path d="M8 15a6 6 0 1 0 12 0v-3" />
+                    <path d="M11 3v2" />
+                    <path d="M6 3v2" />
+                    <path d="M20 10m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  </svg>Asesoramiento en terapia física</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-physotherapist" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 15l-1 -3l4 -2l4 1h3.5" />
+                    <path d="M4 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                    <path d="M12 6m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                    <path d="M12 17v-7" />
+                    <path d="M8 20h7l1 -4l4 -2" />
+                    <path d="M18 20h3" />
+                  </svg>Fisioterapia</p></div>
+        </div>
+        <div class="contenedor-frm-contacto">
+            <div class="div-frm-contacto">
+                <form onsubmit="event.preventDefault(); redirigirWhatsApp();" class="frm-contacto">
+                    <h2>Contáctanos:</h2>
+                    <input type="text" class="btn" id="nombre" placeholder="Nombre" required>
+                    <input type="email" class="btn" id="correo" placeholder="Correo" required>
+                    <input type="tel" class="btn" id="telefono" placeholder="Teléfono" required>
+                    <textarea class="btn" id="mensaje" placeholder="Mensaje" required></textarea>
+                    <div>
+                        <input type="submit" class="enviar" value="Enviar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <section class="ubicacion" id="ubicacion">
+        <h2>Nuestra Ubicación</h2>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14056.455843344882!2d-90.00498025923861!3d20.585799324323347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85f89d851f5db031%3A0x88bb1c96205029da!2sUniversidad%20Tecnol%C3%B3gica%20del%20Poniente!5e1!3m2!1ses-419!2smx!4v1726949306105!5m2!1ses-419!2smx" 
+                width="1200" 
+                height="650" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>    
+    <section id="agendar-cita" class="agendar-cita">
+        <div class="contenedor-agendar-cita">
+            <form action="#" class="frm-agendar-cita" onsubmit="return sendToWhatsApp(event)">
+                <h2>¿Quieres agendar una cita con nosotros?</h2>
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" class="btn-agendar-cita" name="nombre" id="nombreAgendar" placeholder="Nombre Completo" required>
+                <label for="edad">Edad:</label>
+                <input type="number" class="btn-agendar-cita" name="edad" id="edadAgendar" placeholder="Edad" required>
+                <label for="fecha">Fecha:</label>
+                <input type="date" class="btn-agendar-cita" name="fecha" id="fechaAgendar" placeholder="Fecha y Hora" required>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" class="btn-agendar-cita" name="telefono" id="telefonoAgendar" placeholder="Teléfono" required>
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" class="btn-agendar-cita" name="correo" id="correoAgendar" placeholder="Correo Electrónico" required>
+                <div>
+                    <input type="submit" value="Agendar Cita" class="enviar">
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-contactenos">
+            <h3>Contáctenos</h3>
+            <div class="icon-text">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                </svg>
+                <p>9993639771</p>
+            </div>
+            <div class="icon-text">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                    <path d="M3 7l9 6l9 -6" />
+                </svg>
+                <p>FisioVitae@gmail.com</p>
+            </div>
+        </div>
+        <div>
+            <h3>Redes Sociales</h3>
+            <div class="icon-text">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                </svg>
+                <p>Facebook</p>
+            </div>
+            <div class="icon-text">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                </svg>
+                <p>X</p>
+            </div>
+            <div class="icon-text">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                    <path d="M16.5 7.5l0 .01" />
+                </svg>
+                <p>Instagram</p>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>2024 @Todos los derechos reservados. Fisiovitae</p>
+    </div>
+    
+</body>
+</html>

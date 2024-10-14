@@ -1,0 +1,383 @@
+:root {
+    --primary-color: #5DC1B9;
+    --secondary-color: #000;
+    --white: #fff;
+    --black: #000;
+    --font-size-large: 22px;
+    --font-size-medium: 20px;
+    --transition-time: 0.5s;
+}
+
+html {
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-bg {
+    background-color: var(--primary-color);
+}
+
+.navegacion-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 0 150px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-right: auto;
+    margin-left: -80px;
+}
+
+.navegacion-principal a {
+    text-decoration: none;
+    color: var(--black);
+    line-height: 50px;
+    margin: 0 20px;
+    font-size: var(--font-size-large);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: color var(--transition-time);
+}
+
+.navegacion-principal a:hover {
+    color: var(--white);
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    height: 550px;
+    overflow: hidden;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 150px;
+    font-size: 30px;
+    overflow: hidden;
+}
+
+.titulo span {
+    color: var(--white);
+}
+
+.titulo p {
+    font-size: 20px;
+    line-height: 100px;
+}
+
+.titulo a {
+    text-decoration: none;
+    font-size: var(--font-size-medium);
+    margin: auto;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 10px;
+    transition: background-color var(--transition-time);
+}
+
+.titulo a:hover {
+    background-color: rgba(0, 0, 255, 0.315);
+}
+
+.banner {
+    height: 600px;
+}
+
+.banner-img {
+    width: 500px;
+    margin: 10px 80px;
+    overflow: hidden;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+}
+
+.header-galeria {
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+    margin: auto;
+    padding: 50px;
+}
+
+.header-galeria h2 {
+    font-size: xx-large;
+}
+
+.images {
+    display: flex;
+    margin: auto;
+    width: 700px;
+    height: 530px;
+}
+
+.images img {
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: width var(--transition-time), opacity var(--transition-time);
+}
+
+.images img:hover {
+    cursor: crosshair;
+    width: 400px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 800px;
+    background-color: var(--primary-color);
+    margin: 0;
+}
+
+main div {
+    margin: auto;
+}
+
+main svg {
+    margin: 0 30px;
+}
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+    line-height: 100px;
+    margin: -300px 100px;
+}
+
+.servicios h2 {
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.frm-contacto {
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+    background-color: rgba(255, 255, 255, 0.823);
+    padding: 50px;
+    width: 500px;
+    height: 600px;
+}
+
+.frm-contacto h2 {
+    font-size: xx-large;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 15px;
+    margin: 30px 0 20px;
+}
+
+.enviar {
+    background-color: var(--primary-color);
+    padding: 15px;
+    width: 150px;
+    font-size: medium;
+    color: var(--white);
+    border: none;
+    transition: .5s;
+}
+
+.enviar:hover {
+    background-color: lightblue;
+}
+
+/* ---Mapa de ubicación--- */
+
+.ubicacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.ubicacion h2 {
+    font-size: xx-large;
+    margin-bottom: 20px;
+}
+
+/* ---Formulario Agendar Cita--- */
+
+.agendar-cita {
+    display: flex;
+    height: 800px;
+    margin: 0;
+    background-color: var(--primary-color);
+}
+
+.contenedor-agendar-cita {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 750px;
+    width: 700px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.823);
+}
+
+.frm-agendar-cita {
+    display: flex;
+    flex-direction: column;
+    line-height: 50px;
+}
+
+.frm-agendar-cita h2 {
+    font-size: xx-large;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.frm-agendar-cita input {
+    padding: 15px;
+}
+
+.frm-agendar-cita label {
+    font-family: sans-serif;
+}
+
+.frm-agendar-cita .enviar {
+    margin: 20px 0 0 200px;
+}
+
+/* ---Pie de Página--- */
+
+footer {
+    background-color: rgba(0, 0, 0, 0.834);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 20px;
+}
+
+footer div {
+    flex: 1;
+}
+
+footer svg {
+    stroke: var(--white);
+    fill: none;
+}
+
+.footer-contactenos {
+    display: flex;
+    flex-direction: column;
+    margin-left: 350px;
+}
+
+.footer-contactenos svg,
+.footer-contactenos p {
+    display: flex;
+    align-items: center;
+}
+
+.footer-contactenos svg {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.footer-contactenos p {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    background-color: rgba(0, 0, 0, 0.871);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
+
+h3 {
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .navegacion-principal {
+        margin: 0 20px; /* Reducir márgenes para pantallas pequeñas */
+        flex-direction: column; /* Cambiar a columna */
+        align-items: center; /* Centrar elementos */
+    }
+
+    .titulo {
+        margin: 50px 20px; /* Ajustar márgenes */
+        font-size: 20px;
+        line-height: normal; /* Ajustar line-height */
+    }
+
+    .banner {
+        flex-direction: column; /* Cambiar a columna para el banner */
+        height: auto; /* Ajustar altura */
+    }
+
+    .banner-img {
+        width: 100%; /* Asegura que la imagen sea responsiva */
+        margin: 0; /* Eliminar márgenes */
+    }
+
+    .images {
+        width: 100%; /* Hacer que la galería ocupe el ancho completo */
+    }
+
+    .frm-contacto,
+    .frm-agendar-cita {
+        width: 90%; /* Asegura que los formularios ocupen el ancho adecuado */
+        padding: 20px; /* Ajustar padding */
+        margin: auto; /* Centrar horizontalmente */
+    }
+
+    .servicios {
+        margin: -100px 20px; /* Ajustar márgenes */
+        line-height: normal; /* Ajustar line-height */
+    }
+
+    .footer-contactenos {
+        margin-left: 0; /* Eliminar margen en móviles */
+        align-items: center; /* Centrar los elementos */
+    }
+
+    .footer-contactenos {
+        margin: 20px 0; /* Ajustar margen superior e inferior */
+    }
+}
